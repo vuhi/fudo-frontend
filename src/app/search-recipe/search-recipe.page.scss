@@ -1,0 +1,62 @@
+//.welcome-card img {
+//  max-height: 35vh;
+//  overflow: hidden;
+//}
+//.welcome-card {
+//  background: rgba(0,0,0,.1);
+//  width: 80%;
+//}
+ion-content {
+  --background: transparent !important;
+  .search-card {
+    --background: rgba(255, 255, 255, .5);
+    margin-top: 3rem;
+  }
+  .quote-msg {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #fff;
+    .warning {
+      letter-spacing: .1rem;
+      text-transform: uppercase !important;
+    }
+  }
+  .quote-l, .quote-r {
+    position: absolute;
+  }
+  .quote-l {
+    transform: scaleX(-1);
+  }
+
+  ion-searchbar {
+    --placeholder-font-weight: bolder;
+    --clear-button-color: red;
+    --color: #ff8f58;
+    --placeholder-color: grey;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  ion-content {
+    .search-card {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .quote-msg {
+      font-size: 2rem;
+      color: #ff8f58;
+      background: white;
+      margin-right: 1rem;
+      margin-left: 1rem;
+
+      .warning {
+        background: #ee6352;
+        color: white;
+        margin-right: .4rem;
+        padding: .5rem 1rem;
+      }
+    }
+  }
+}
+

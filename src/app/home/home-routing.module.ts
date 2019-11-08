@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TabsPage } from './tabs.page';
+import { HomePage } from './home.page';
 
 const routes: Routes = [
   {
-    path: 'tabs',
-    component: TabsPage,
+    path: 'home',
+    component: HomePage,
     children: [
       {
         path: 'search-recipe',
         children: [
           {
             path: '',
-            loadChildren: () =>
-              import('../search-recipe/search-recipe.module').then(m => m.SearchRecipePageModule)
+            loadChildren: () => import('../search-recipe/search-recipe.module').then(m => m.SearchRecipePageModule)
           }
         ]
       },
@@ -39,14 +38,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/search-recipe',
+        redirectTo: '/home/search-recipe',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/search-recipe',
+    redirectTo: '/home/search-recipe',
     pathMatch: 'full'
   }
 ];
@@ -55,4 +54,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class TabsPageRoutingModule {}
+export class HomePageRoutingModule {}
