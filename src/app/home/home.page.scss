@@ -1,0 +1,29 @@
+ion-content.home {
+  --background: url('https://images.wallpaperscraft.com/image/macaroons_almond_biscuits_dessert_122500_2048x1152.jpg') no-repeat center center / cover;
+  filter: blur(1px);
+  &:before {
+    background: linear-gradient(to right,
+      rgba(42, 159, 255, 0.3) 10%,
+      rgba(47, 47, 47, 0.9) 75%,
+      rgba(33, 33, 32, .95) 90%,
+      #212120 95%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+ion-toolbar {
+  --background: #49071c;
+  --color: #fff;
+}
+
+ion-title {
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 5px;
+}
